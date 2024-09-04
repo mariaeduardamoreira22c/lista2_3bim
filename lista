@@ -1,0 +1,25 @@
+exercício 1.1
+SELECT pedidos.pedido_id, clientes.nome, clientes.email
+FROM pedidos
+INNER JOIN clientes ON pedidos.cliente_id = clientes.cliente_id;
+
+exercício 2.2
+SELECT campanhas.nome AS campanha, clientes.nome AS cliente
+FROM campanhas
+INNER JOIN participacoes_campanha ON campanhas.campanha_id = participacoes_campanha.campanha_id
+INNER JOIN clientes ON participacoes_campanha.cliente_id = clientes.cliente_id;
+
+exercício 3.1
+SELECT transacoes.transacao_id, contas.nome AS conta, transacoes.tipo, transacoes.valor
+FROM transacoes
+INNER JOIN contas ON transacoes.conta_id = contas.conta_id;
+
+exercício 4.3
+SELECT consultas.consulta_id, pacientes.nome AS paciente, consultas.motivo
+FROM consultas
+INNER JOIN pacientes ON consultas.paciente_id = pacientes.paciente_id;
+
+exercício 5.1
+SELECT produtos.nome AS produto, fornecedores.nome AS fornecedor
+FROM produtos
+LEFT JOIN fornecedores ON produtos.fornecedor_id = fornecedores.fornecedor_id;
